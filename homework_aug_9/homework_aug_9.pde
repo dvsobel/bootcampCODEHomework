@@ -1,6 +1,6 @@
 //ref. tree drawing from class.
 
-float x = 100;
+float r = 100;
 float theta = 0;
 
 
@@ -13,10 +13,14 @@ void setup(){
 
 void draw(){
   
+  float x = r * cos(theta);
+  float y = r * sin(theta);
+  
   for (int i=0; i<1000; i++){ /// a forloop helps you execute something a lot instead of writing it so many times 
-  tree(i*10+10, i*10+10);
+  tree(i*x, i*y);
   }
  
+ theta++;
  
 }
 
